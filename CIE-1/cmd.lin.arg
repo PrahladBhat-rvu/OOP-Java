@@ -1,0 +1,32 @@
+public class MinMaxFinder {
+
+    public static void main(String[] args) {
+
+        if (args.length < 2) {
+            System.out.println("Error: Please provide at least one integer as a command-line argument.");
+            return;
+        }
+
+        int smallestNumber;
+        int largestNumber;
+
+        int firstNum = Integer.parseInt(args[0]);
+        smallestNumber = firstNum;
+        largestNumber = firstNum;
+
+        for (int i = 1; i < args.length; i++) {
+            int currentNum = Integer.parseInt(args[i]);
+
+            if (currentNum > largestNumber) {
+                largestNumber = currentNum;
+            }
+
+            if (currentNum < smallestNumber) {
+                smallestNumber = currentNum;
+            }
+        }
+
+        System.out.println("The smallest number is: " + smallestNumber);
+        System.out.println("The largest number is: " + largestNumber);
+    }
+}
