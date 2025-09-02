@@ -1,0 +1,18 @@
+public class BankAccount {
+
+    // The account balance.
+    private double balance;
+
+    /**
+     * Deposits the specified amount into the account.
+     */
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    /**
+     * Withdraws the specified amount from the account.
+     */
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
